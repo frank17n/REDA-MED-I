@@ -23,8 +23,9 @@ Colores, Tipografias, Medidads Estandar*/
 --color-gris: rgb(77, 77, 74);
 
 /*Tipografias*/
---fuente-titulo: "Segoe UI",Arial,sans-serif;
---fuente-parrafo: "Roboto",Arial,sans-serif;
+--fuente-titulo: "Rubik",rubik,;
+--fuente-subtitulo: "Cairo",cairo;
+--fuente-parrafo: "Karma",karma;
 
 /*Tipografias*/
 --fuente-h1-size: 2.2rem;
