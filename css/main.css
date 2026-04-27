@@ -7,27 +7,22 @@ body {
     margin: 0;
     font-family: Arial;
 }
-/*la barra de nav*//*
-nav.navbar {
-    width: 80%;
-    margin: 0px auto;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--fondo);
-    padding: 12px 40px;
-    color: white;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1000;
-}*/
 
 
+nav{
+    font-family: var();
+}
+
+nav li.inicio:hover{
+    background-color: #008000;
+}
+li.help{
+    background-color: red;
+    color:white;
+}
 
 nav.navbar {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     height: 80px;
     display: flex;
@@ -36,7 +31,7 @@ nav.navbar {
     background: var(--fondo);
     padding: 12px 40px;
     position: relative;
-    z-index: 9999; /* más alto */
+    z-index: 9999; /*lo  más alto pero equids */
 }
 
 /*quitar las viñeatas*/
@@ -69,19 +64,6 @@ nav.navbar {
 }
 
 
-/* submenu */
-/*.submenu {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background: rgb(3, 32, 149);
-    color: var(--letra_nav);
-    list-style: none;
-    padding: 0;
-    width: 200px;
-}
-    */
 
     
     .submenu {
@@ -112,21 +94,6 @@ nav.navbar {
     padding: 0;
     z-index: 9999;
 }
-
-
-
-/*
-.submenu2 {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 200px;
-    background: rgb(14, 1, 118);
-    list-style: none;
-    padding: 0;
-    width: 200px;
-}*/
-/* hover */
 
 .dropdown:hover .submenu {
     display: block;
