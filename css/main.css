@@ -13,25 +13,37 @@ nav{
     font-family: var();
 }
 
-nav li.inicio:hover{
-    background-color: #008000;
-}
-li.help{
-    background-color: red;
-    color:white;
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
 }
 
-nav.navbar {
+nav li.inicio {
+ 
+    width: calc(100%/7);
+    text-align: center;
+}
+nav li a{
+    text-align: center;
+}
+nav li.inicio a:hover{
+    background-color: #008000;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+}
+
+
+nav.menu-principal {
     width: 100%;
-    margin: 0 auto;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--fondo);
+    background: var(--color-principal);
     padding: 12px 40px;
-    position: relative;
-    z-index: 9999; /*lo  más alto pero equids */
 }
 
 /*quitar las viñeatas*/
@@ -49,16 +61,23 @@ nav.navbar {
     position: relative;
 }
 /*colocar en bloque*/
+
+
 .menu a {
     color: var(--letra_nav);
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    height: 80px;
+    display: flex;
+    justify-content: center;  /* centra horizontal */
+    align-items: center;      /* centra vertical */
+    width: 100%;
+    padding: 0;
 }
 /*añinear al centro*/
 .dropdown a {
     display: flex;
     align-items: center;
+    text-align: center;
     height: 60px; /* altura fija */
     padding: 0 20px;
 }
@@ -71,7 +90,7 @@ nav.navbar {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgb(3, 32, 149);
+    background: var(--subtono-principal);
     width: 300px;
     z-index: 9999;
     list-style: none;
@@ -88,7 +107,7 @@ nav.navbar {
     position: absolute;
     top: 0;
     left: 100%;
-    background: rgb(14, 1, 118);
+    background: var(--subsubtono-principal);
     width: 250px;
     list-style: none;
     padding: 0;
@@ -111,16 +130,7 @@ nav.navbar {
 
 
 /*pa que la barra se quede pegada*/
-.navbar.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0;
-    border-radius: 0;
-}
+
 
 
 * {
@@ -129,16 +139,36 @@ nav.navbar {
 
 body {
     margin: 0;
-    overflow-x: hidden;/
+    overflow-x: hidden;
+}
+
+li.help{
+    background-color: red;
+    color:white;
+    
+}
+li.help img{
+    height: 49px;
 }
 
 
+li.help:hover{
+    background-color: rgb(212, 3, 3);
+   
+}
 
 
-/*=============================================================*/
+.menu a.active {
+    background-color: #008000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+/*==========================================================================================================================*/
 
 main{
     margin-top: 100px;
+    min-height: 60vh;
 }
 main.mensaje {
 
@@ -157,8 +187,15 @@ main.mensaje #mensaje {
     background-color: rgb(185, 185, 185);
     border-radius: 20px;
     padding: 30px 30px;
+    
 }
-
+main.mensaje #mensaje h1{
+    font-family: var(--fuente-titulo);
+    font-weight: 800;
+    text-align: center;
+    font-size: 60px;
+    color: var(--color-secundario);
+}
 main.mensaje #img {
     grid-column: 3/6;
 
@@ -167,4 +204,11 @@ main.mensaje #img {
 main.mensaje img {
     max-width: 100%;
     border-radius: 20px;
+}
+
+div.particion{
+    height: 100px;
+    width: 100%;
+    background-color:  var(--color-principal);
+    margin: 100px 0;
 }

@@ -13,9 +13,13 @@ Colores, Tipografias, Medidads Estandar*/
 
 
 
---color-principal: rgb(52, 102, 48);
---color-secundario: rgb(35, 53, 90);
---color-acento: rgb(168, 85, 33);
+--color-principal: #200e8f;
+--subtono-principal:#314cce;
+--subsubtono-principal:#485ecf;
+--color-secundario:  #004a00;
+--subtono-secundario:#39aa16;
+--color-acento: #811b00;
+--subtono-acento:#d12c00;
 
 /*Colores Principales*/
 --color-blanco: rgb(255, 255, 255);
@@ -23,9 +27,9 @@ Colores, Tipografias, Medidads Estandar*/
 --color-gris: rgb(77, 77, 74);
 
 /*Tipografias*/
---fuente-titulo: "Rubik",rubik,;
---fuente-subtitulo: "Cairo",cairo;
---fuente-parrafo: "Karma",karma;
+--fuente-titulo: "Rubik",Rubik,;
+--fuente-subtitulo: "Cairo",Cairo;
+--fuente-parrafo: "Karma",Karma;
 
 /*Tipografias*/
 --fuente-h1-size: 2.2rem;
