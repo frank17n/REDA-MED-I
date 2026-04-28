@@ -3,6 +3,11 @@
 @import url(layout.css);
 @import url(components.css);
 
+
+
+/*estilos */
+
+
 body {
     margin: 0;
     font-family: Arial;
@@ -211,4 +216,76 @@ div.particion{
     width: 100%;
     background-color:  var(--color-principal);
     margin: 100px 0;
+}
+
+div.main-objetivos{
+    margin-bottom:20px;
+    display: flex;
+}
+div.main-objetivos div{
+    background-color: var(--azul-fondo-claro);
+    padding:20px;
+    border-radius: 20px;
+    margin: 20px;
+    width: 50%;
+}
+
+div.main-contenidos h1{
+    font-family: var(--funte-subtitulo);
+    color: var(--color-secundario);
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+
+div.main-contenidos h2 {
+    font-family: var(--funte-subtitulo);
+    color: var(--color-secundario);
+    text-transform: capitalize;
+    margin-top: 15px;
+text-align: center;
+    
+}
+
+div.main-contenidos a{
+    text-decoration: none;
+    color: black;
+}
+div.main-contenidos sumary{
+    width: 100%;
+}
+
+div.main-contenidos-detalles{
+    background-color: var(--azul-fondo-claro);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+
+/*estilos para la etiquera details*/
+
+
+details summary {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espacio entre la flecha y el texto */
+    cursor: pointer;
+    list-style: none; /* quita el estilo por defecto */
+}
+
+/* ocultar la flecha por defecto en Chrome/Safari */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* crear una flecha personalizada */
+details summary::before {
+    content: "▶";
+    font-size: 14px;
+    color: black;
+}
+
+/* cuando esté abierto */
+details[open] summary::before {
+    content: "▼";
 }
