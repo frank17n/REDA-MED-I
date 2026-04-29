@@ -7,6 +7,12 @@
 
 /*estilos */
 
+div.mensaje h1{
+    color: var(--color-secundario);
+    text-align: center;
+    font-weight: 700;
+}
+
 
 body {
     margin: 0;
@@ -173,49 +179,28 @@ li.help:hover{
 
 main{
     margin-top: 100px;
-    min-height: 60vh;
+    min-height: 70vh;
 }
-main.mensaje {
-
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* align-items: center; */
-    
-   grid-auto-flow: column;
-    gap: 40px;
-}
-
-main.mensaje #mensaje {
-    grid-column: 7/11;
+main div.mensaje {
     max-width: 100%;
-
-    background-color: rgb(185, 185, 185);
-    border-radius: 20px;
-    padding: 30px 30px;
-    
+    display: flex;
+    align-items: center;
 }
-main.mensaje #mensaje h1{
-    font-family: var(--fuente-titulo);
-    font-weight: 800;
-    text-align: center;
-    font-size: 60px;
-    color: var(--color-secundario);
-}
-main.mensaje #img {
-    grid-column: 3/6;
-
-}
-
-main.mensaje img {
-    max-width: 100%;
+main div .mensaje section.mensaje img{
+    max-width: 70%;
     border-radius: 20px;
 }
+main div.mensaje section.mensaje{
+    width: 50%;
+}
+
+
 
 div.particion{
     height: 100px;
     width: 100%;
     background-color:  var(--color-principal);
-    margin: 100px 0;
+   
 }
 
 div.main-objetivos{
@@ -243,6 +228,7 @@ div.main-contenidos h2 {
     color: var(--color-secundario);
     text-transform: capitalize;
     margin-top: 15px;
+    font-size: 25px;
 text-align: center;
     
 }
@@ -261,8 +247,10 @@ div.main-contenidos-detalles{
     border-radius: 20px;
 }
 
+/*estilos de las tarjetas =====================================================================*/
 
-/*estilos para la etiquera details*/
+
+/*estilos para la etiquera details==========================================================*/
 
 
 details summary {

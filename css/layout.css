@@ -6,7 +6,7 @@
 }
 
 .site-footer__title {
-  color: var(--color-acento) !important;
+  color: var(--color-acento);
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -97,32 +97,4 @@
   max-width:160px;
   width:100%;
   height:auto;
-}
-
-/* ==============================
-RESPONSIVE
-============================== */
-
-@media (max-width:900px){
-
-  .main-nav__list{
-    flex-direction:column;
-  }
-
-  .main-nav__link{
-    text-align:left;
-    border-bottom:1px solid var(--color-blanco);
-  }
-
-  .main-nav__submenu{
-    position:static;
-  }
-
-  .main-nav__submenu--level-2{
-    position:static;
-  }
-
-  .site-footer__columns{
-    grid-template-columns:1fr;
-  }
 }
