@@ -1,3 +1,4 @@
+@import url(../../css/main.css);
 main.bienvenidaa{
     height:calc(90vh - 80px);
     display: flex;
@@ -27,11 +28,19 @@ div.objetivo-unidad{
 }
 .card, .front, .back{
     border-radius: 20px;
+    min-height: 200px;
     
 
 }
 .back{
     justify-content: center;
 
+}
+
+div.actividades-evaluativas{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 

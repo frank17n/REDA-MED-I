@@ -3,6 +3,11 @@
 @import url(layout.css);
 @import url(components.css);
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 
 /*estilos */
@@ -23,6 +28,9 @@
 * h4{
     font-size: var(--fuente-h4-size);
     text-transform: capitalize;
+}
+* h5{
+    font-size: 16px;
 }
 * p{
     font-size: var(--fuente-p-size);
@@ -103,6 +111,7 @@ nav.menu-principal {
 .menu li {
     position: relative;
 }
+
 /*colocar en bloque*/
 
 
@@ -121,19 +130,20 @@ nav.menu-principal {
     display: flex;
     align-items: center;
     text-align: center;
-    height: 60px; /* altura fija */
+    height: 80px; /* altura fija */
     padding: 0 20px;
 }
     .submenu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 80px;
     left: 0;
     background: var(--subtono-principal);
     width: 300px;
     z-index: 9999;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .submenu li a {
@@ -237,26 +247,26 @@ div.particion{
 }
 
 /*objetivos =======================================================================*/
-
-.card{
-    gap: 20px;
-    flex-wrap: wrap;
-    
+.card {
+    position: relative; /* 🔥 clave */
+    width: 100%;
+    height: 250px;
+    perspective: 500px; /* mejor efecto 3D */
 }
 .card .front,
 .card .back {
-    
-    margin: 0;
     position: absolute;
     width: 100%;
-    min-height: 200px;
-    backface-visibility: hidden;
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    border-radius: 20px;
     padding: 50px;
 }
 .card div{
-   
     height: 100%;
     width: 100%;
     align-items: center;
@@ -264,38 +274,39 @@ div.particion{
     backface-visibility: hidden;
     transition: 1s;
 }
-.card .front{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: aliceblue;
-    transform: perspective(500px ) rotateY(0deg);
-} 
+.card .front {
+    background-color: var(--azul-fondo-claro);
+    transform: rotateY(0deg);
+}
 
-.card .back{
-   background-color: var(--color-principal);
+.card .back {
+    background-color: var(--color-principal);
     color: white;
     transform: rotateY(180deg);
-} 
-
-.card:hover .front{
-    transform: perspective(500px ) rotateY(180deg);
-}
-.card:hover .back{
-    transform: perspective(500px ) rotateY(360deg);
 }
 
-
-
-.main-objetivos{
-     display: flex;
-   min-height:300px;
+.card:hover .front {
+    transform: rotateY(180deg);
 }
+
+.card:hover .back {
+    transform: rotateY(360deg);
+}
+
+
+.main-objetivos {
+    display: flex;
+    gap: 20px;
+}
+
+.main-objetivos .card {
+    width: 50%;
+}
+
 div.main-objetivos div{
     background-color: var(--azul-fondo-claro);
     border-radius: 20px;
-    margin: 20px;
+   
     width: 50%;
 }
 
@@ -333,6 +344,23 @@ div.main-contenidos-detalles details {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 20px;
+}
+ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+ul ul {
+    padding-left: 25px; /* más sangría para subviñetas */
+    list-style-type: circle; /* cambia estilo de la subviñeta */
+}
+
+ul ul ul {
+    list-style-type: square; /* tercer nivel si lo usas */
+}
+
+li {
+    margin-bottom: 5px;
 }
 
 /*estilos para la etiquera details==========================================================*/

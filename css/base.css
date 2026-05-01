@@ -106,8 +106,10 @@ body{
     max-width: var(--max-container-width);
     margin: 0 auto;
     padding: 0 15px;
+    width: 90%;
 
 }
+
 imag{
     max-width: 100%;
     display: block;
