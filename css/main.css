@@ -4,38 +4,45 @@
 @import url(components.css);
 
 
-@media (max-width: 992px) {
 
-    main div.mensaje {
-        flex-direction: column;
-        text-align: center;
-    }
+/*estilos */
+* h1{
+    font-size: var(--fuente-h1-size);
+    text-transform: capitalize;
 
-    main div.mensaje section.mensaje {
-        width: 100%;
-    }
-
-    .main-objetivos {
-        flex-direction: column;
-    }
-
-    .main-objetivos div {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-    }
+}
+* h2{
+    font-size: var(--fuente-h2-size);
+    text-transform: capitalize;
+    text-align: center;
+}
+* h3{
+    font-size: var(--fuente-h3-size);
+    text-transform: capitalize;
+}
+* h4{
+    font-size: var(--fuente-h4-size);
+    text-transform: capitalize;
+}
+* p{
+    font-size: var(--fuente-p-size);
 }
 
 
-/*estilos */
+h1.prin{
+    text-align: center;
+    margin-top: 50px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
 
-div.mensaje h1{
+div.container main h1{
     color: var(--color-secundario);
     text-align: center;
     font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-size: 4em;
 }
 
 
@@ -43,7 +50,7 @@ body {
     margin: 0;
     font-family: Arial;
 }
-
+/*nav ============================================================================================================================*/
 
 nav{
     font-family: var();
@@ -117,10 +124,6 @@ nav.menu-principal {
     height: 60px; /* altura fija */
     padding: 0 20px;
 }
-
-
-
-    
     .submenu {
     display: none;
     position: absolute;
@@ -163,11 +166,7 @@ nav.menu-principal {
     color: white;
 }
 
-
-
 /*pa que la barra se quede pegada*/
-
-
 
 * {
     box-sizing: border-box;
@@ -200,29 +199,36 @@ li.help:hover{
     display: flex;
     align-items: center;
 }
-/*==========================================================================================================================*/
-
-main div.mensaje {
-    width: 100%;
+/*mensaje ==========================================================================================================================*/
+main.bienvenida{
+    height:calc(100vh - 100px - 80px);
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    text-align: justify;
+    
+   
 }
-
-main div.mensaje section.mensaje {
+main.bienvenida .mensaje {
     width: 48%;
+    padding: 20px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+  
 }
-
-main div.mensaje section.mensaje img {
-    width: 100%;
+main.bienvenida img{
     max-width: 100%;
-    height: auto;
+      border-radius: 20px;
 }
 
 
 
+
+
+
+
+/**particion =======================================================================================*/
 div.particion{
     height: 100px;
     width: 100%;
@@ -230,17 +236,70 @@ div.particion{
    
 }
 
-div.main-objetivos{
-    margin-bottom:20px;
+/*objetivos =======================================================================*/
+
+.card{
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+.card .front,
+.card .back {
+    
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    min-height: 200px;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.card div{
+   
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+.card .front{
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    transform: perspective(500px ) rotateY(0deg);
+} 
+
+.card .back{
+   background-color: var(--color-principal);
+    color: white;
+    transform: rotateY(180deg);
+} 
+
+.card:hover .front{
+    transform: perspective(500px ) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(500px ) rotateY(360deg);
+}
+
+
+
+.main-objetivos{
+     display: flex;
+   min-height:300px;
 }
 div.main-objetivos div{
     background-color: var(--azul-fondo-claro);
-    padding:20px;
     border-radius: 20px;
     margin: 20px;
     width: 50%;
 }
+
+/*contenidos ==========================================================*/
 
 div.main-contenidos h1{
     font-family: var(--funte-subtitulo);
@@ -268,14 +327,13 @@ div.main-contenidos sumary{
     width: 100%;
 }
 
-div.main-contenidos-detalles{
+
+div.main-contenidos-detalles details {
     background-color: var(--azul-fondo-claro);
-    padding: 50px;
+    padding: 10px 20px;
+    margin: 10px;
     border-radius: 20px;
 }
-
-/*estilos de las tarjetas =====================================================================*/
-
 
 /*estilos para la etiquera details==========================================================*/
 
