@@ -47,10 +47,10 @@ h1.prin{
 div.container main h1{
     color: var(--color-secundario);
     text-align: center;
-    font-weight: 700;
+    font-weight:bolder;
     text-transform: capitalize;
     margin-top: 20px;
-    font-size: 4em;
+    font-size: 3.5em;
 }
 
 
@@ -228,8 +228,8 @@ main.bienvenida .mensaje {
   
 }
 main.bienvenida img{
-    max-width: 100%;
-      border-radius: 20px;
+    max-width: 90%;
+    border-radius: 20px;
 }
 
 
