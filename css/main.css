@@ -13,11 +13,15 @@
 /*estilos */
 * h1{
     font-size: var(--fuente-h1-size);
+    color: var(--color-secundario);
     text-transform: capitalize;
 
 }
 * h2{
     font-size: var(--fuente-h2-size);
+    color: var(--color-secundario);
+     text-transform: capitalize;
+     text-align: center;
     text-transform: capitalize;
     text-align: center;
 }
