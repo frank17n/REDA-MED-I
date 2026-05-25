@@ -1,0 +1,38 @@
+{
+  "options": [
+    {
+      "id": "opt-strawberry",
+      "type": "image",
+      "label": "describe mejor una herramienta tecnológica"
+    },
+    {
+      "id": "opt-apple",
+      "type": "text",
+      "label": "Caracteriza a una herramienta digital"
+    },
+    {
+      "id": "opt-banana",
+      "type": "image",
+      "label": "¿Cuál es un ejemplo de herramienta tecnológica?"
+    },
+     {
+      "id": "opt-4",
+      "type": "image",
+      "label": "Cuál es una diferencia entre herramientas tecnológicas y digitales"
+    },
+    {
+      "id": "opt-5",
+      "type": "image",
+      "label": "¿Cuál es una ventaja de las herramientas digitales en la educación?"
+    }    
+  ],
+  "targets": [
+   { "id": "zone-e", "accepts": "opt-5", "label": "LFacilitan la comunicación y el acceso a la información." },
+    { "id": "zone-b", "accepts": "opt-apple", "label": "Es un programa o aplicación intangible." },
+    { "id": "zone-c", "accepts": "opt-banana", "label": "Computadora" },
+     { "id": "zone-a", "accepts": "opt-strawberry", "label": "Recursos físicos y digitales que facilitan tareas" },
+    { "id": "zone-d", "accepts": "opt-4", "label": "Las herramientas tecnológicas incluyen hardware y software, mientras las digitales son principalmente software" }
+    
+    
+  ]
+}

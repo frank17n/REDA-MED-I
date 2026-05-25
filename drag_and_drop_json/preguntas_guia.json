@@ -1,0 +1,32 @@
+{
+  /* "options": lista de opciones que aparecerán en el panel origen */
+  "options": [
+    {
+      /* id único que se usa para identificar la opción en DnD y en la verificación */
+      "id": "opt-strawberry",
+      /* tipo: "image" o "text" (controla cómo se renderiza) */
+      "type": "image",
+      /* etiqueta visible o texto alternativo */
+      "label": "Fresa",
+      /* thumb: data URI o ruta a imagen; si es texto, puede omitirse */
+      "thumb": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80'><rect width='120' height='80' rx='10' fill='%23fff0f2'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%23d6336c'>Fresa</text></svg>"
+    },
+    {
+      "id": "opt-apple",
+      "type": "text",
+      "label": "Manzana"
+    },
+    {
+      "id": "opt-banana",
+      "type": "image",
+      "label": "Banana",
+      "thumb": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80'><rect width='120' height='80' rx='10' fill='%23fffbe6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%23b45309'>Banana</text></svg>"
+    }
+  ],
+  /* "targets": lista de zonas destino; cada zona indica qué option acepta mediante "accepts" */
+  "targets": [
+    { "id": "zone-a", "accepts": "opt-strawberry", "label": "Zona A" },
+    { "id": "zone-b", "accepts": "opt-apple", "label": "Zona B" },
+    { "id": "zone-c", "accepts": "opt-banana", "label": "Zona C" }
+  ]
+}

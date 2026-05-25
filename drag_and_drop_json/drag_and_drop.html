@@ -1,0 +1,42 @@
+<!doctype html> <!-- tipo de documento HTML5 -->
+<html lang="es"> <!-- idioma del documento -->
+<head> <!-- cabecera con metadatos -->
+  <meta charset="utf-8" /> <!-- codificación de caracteres -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- responsive -->
+  <title>Actividad Drag & Drop - JSON</title> <!-- título de la pestaña -->
+  <link rel="stylesheet" href="styles.css" /> <!-- enlace al CSS externo -->
+</head>
+<body> <!-- inicio del cuerpo -->
+  <main class="app" id="app"> <!-- contenedor principal -->
+    <header class="header"> <!-- encabezado -->
+      <h1>Relaciona la imagen o texto con la zona correcta</h1> <!-- título visible -->
+      <p class="lead">Arrastra la opción correcta a su zona correspondiente. Las preguntas se cargan desde preguntas.json.</p> <!-- subtítulo -->
+    </header>
+
+    <section class="stage"> <!-- área principal con paneles -->
+      <!-- Contenedores vacíos: serán rellenados desde preguntas.json -->
+      <aside class="panel panel-left" id="source" aria-label="Opciones" tabindex="0"> <!-- panel origen -->
+        <h2>Opciones</h2> <!-- título del panel origen -->
+        <!-- .draggable se insertan aquí desde script.js -->
+      </aside>
+
+      <section class="panel panel-right" id="targets" aria-label="Zonas destino"> <!-- panel destino -->
+        <h2>Zonas destino</h2> <!-- título del panel destino -->
+        <!-- .target se insertan aquí desde script.js -->
+      </section>
+    </section>
+
+    <footer class="controls"> <!-- pie con controles -->
+      <button id="verifyBtn" class="btn primary" type="button">Verificar</button> <!-- botón verificar -->
+      <button id="resetBtn" class="btn" type="button">Reiniciar</button> <!-- botón reiniciar -->
+
+      <div class="result-wrap"> <!-- contenedor de resultados -->
+        <div id="score" class="score" aria-live="polite" role="status"></div> <!-- puntuación -->
+        <div id="feedback" class="feedback-box" aria-live="polite"></div> <!-- retroalimentación -->
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script> <!-- carga el JS al final -->
+</body>
+</html>

@@ -1,0 +1,245 @@
+:root {
+  /* variables globales */
+  --bg: #ffffff;
+  --panel: #f8fafc;
+  --card: #ffffff;
+  --accent-2: #60a5fa;
+  --text: #0b1220;
+  --muted: rgba(11, 12, 32, 0.55);
+  --border: rgba(11, 12, 32, 0.06);
+}
+
+
+.drag {
+  /* contenedor principal */
+margin-top: 50px;
+padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  
+  background: var(--bg);
+}
+
+.app {
+  /* ancho máximo del contenedor */
+  width: 100%;
+  max-width: 1100px;
+}
+
+.header {
+  /* encabezado */
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.lead {
+  /* subtítulo */
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.stage {
+  /* layout de paneles */
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.panel {
+  /* estilo panel */
+  background: var(--panel);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-left {
+  /* ancho panel izquierdo */
+  width: 360px;
+  flex: 0 0 360px;
+}
+
+.panel-right {
+  /* panel derecho */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.draggable {
+  /* tarjeta arrastrable */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 10px 0;
+  cursor: grab;
+  user-select: none;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.06);
+  border: 1px solid var(--border);
+  min-height: 88px;
+}
+
+.draggable:focus {
+  /* foco accesible */
+  outline: 3px solid rgba(96, 165, 250, 0.18);
+  outline-offset: 3px;
+}
+
+.thumb {
+  /* miniatura */
+  padding: 20px;
+  width: auto;
+  height: 80px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.thumb.label {
+  /* estilo label */
+  background: #f1f5f9;
+}
+
+.dragging {
+  /* estado arrastrando */
+  transform: scale(1.02);
+  opacity: 0.9;
+  cursor: grabbing;
+  z-index: 1200;
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+}
+
+.target {
+  /* zona destino */
+  min-height: 110px;
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px dashed rgba(11, 12, 32, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: background 160ms, border-color 160ms;
+}
+
+.target .target-label {
+  /* etiqueta zona */
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.target.over {
+  /* hover visual */
+  background: rgba(96, 165, 250, 0.06);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+.target.occupied {
+  /* ocupado */
+  background: rgba(16, 185, 129, 0.06);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+#targets.keyboard-mode .target {
+  /* modo teclado */
+  outline: 2px dashed rgba(96, 165, 250, 0.12);
+}
+
+.controls {
+  /* controles */
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  /* botón base */
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  background: rgba(11, 12, 32, 0.04);
+  color: var(--text);
+  font-weight: 600;
+  transition: background 140ms;
+}
+
+.btn:hover {
+  /* hover botón */
+  background: rgba(11, 12, 32, 0.08);
+}
+
+.btn.primary {
+  /* botón principal */
+  background: linear-gradient(90deg, var(--accent-2), #06b6d4);
+  color: #041025;
+  font-weight: 700;
+}
+
+.result-wrap {
+  /* contenedor resultados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  min-width: 260px;
+}
+
+.score {
+  /* puntuación */
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: var(--text);
+  padding: 6px 12px;
+}
+
+.feedback-box {
+  /* feedback */
+  margin-top: 8px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04);
+  text-align: center;
+  min-height: 44px;
+}
+
+.feedback-box .hint {
+  /* hint */
+  color: var(--muted);
+  font-weight: 600;
+}
+
+@media (max-width: 880px) {
+  /* responsive */
+  .stage {
+    flex-direction: column;
+  }
+  .panel-left {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  .result-wrap {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
