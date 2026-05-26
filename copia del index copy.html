@@ -19,33 +19,129 @@
     src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
 
 
+    <style>
+      
+/* ======================================================
+ACTIVIDAD COMPLETAR PALABRAS
+====================================================== */
+
+.fill-words{
+  background-color:var(--color-blanco);
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+
+.fill-words__header{
+  margin-bottom:25px;
+}
+
+.fill-words__title{
+  margin-bottom:10px;
+}
+
+.fill-words__description{
+  line-height:1.6;
+}
+
+/* CONTENIDO */
+
+.fill-words__content{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:30px;
+  align-items:start;
+}
+
+/* PALABRAS */
+
+.fill-words__options{
+  background-color:var(--color-gris);
+  padding:20px;
+  border-radius:14px;
+}
+
+.fill-words__word{
+  background-color:var(--color-blanco);
+  padding:14px;
+  border-radius:10px;
+  margin-bottom:15px;
+  cursor:grab;
+  text-align:center;
+  font-weight:600;
+  border:1px solid #dbe2ea;
+  transition:0.3s ease;
+}
+
+.fill-words__word:hover{
+  transform:translateY(-2px);
+}
+
+/* ZONAS */
+
+.fill-words__sentence{
+  margin-bottom:30px;
+  line-height:2;
+  font-size:18px;
+}
+
+.fill-words__dropzone{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:160px;
+  min-height:45px;
+  padding:8px 12px;
+  margin:0 6px;
+  border-bottom:3px solid var(--color-acento);
+  background-color:#f8fafc;
+  border-radius:6px 6px 0 0;
+}
+
+/* HOVER */
+
+.fill-words__dropzone.over{
+  background-color:#e8f4ff;
+}
+
+/* CONTROLES */
+
+.fill-words__controls{
+  display:flex;
+  gap:15px;
+  margin-top:25px;
+}
+
+/* FEEDBACK */
+
+.fill-words__feedback{
+  margin-top:20px;
+  padding:14px;
+  border-radius:10px;
+  background-color:var(--color-gris);
+  min-height:50px;
+  line-height:1.5;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .fill-words__content{
+    grid-template-columns:1fr;
+  }
+
+}
+
+    </style>
+
 </head>
 
 <body>
 
 
-  <div class="particion"></div>
-
-  <script src="js/main.js"></script>
-  <!--cuerpo ==================================================================================================-->
-
-  <div class="container">
-
-    <main class="bienvenida">
-      <div class="mensaje">
-        <img id="imagen" alt="imagen de la unidad" src="assets/images/18377.jpg" />
-      </div>
-      <div class="mensaje"">
-        <h1><a href="pruebas/pruebas.html">werdfghjklñkjhgfdrhj</a></h1>
-          <h1>HERRAMIENTAS TECNOLOGICAS PARA FACILITAR EL APRENDIZAJE</h1>
-          
-          <h5>Descubre una nueva forma de aprender y enseñar. Nuestra plataforma REDA
-          integra los recursos digitales más avanzados para transformar tu
-          experiencia educativa en un viaje dinámico e interactivo.
-          </h5>
-        </div>
-  </main>
-</div>
 
  <header>
     <nav class=" menu-principal">
@@ -199,183 +295,146 @@
 
 
 
-        <div class="container">
-          <h1 class="prin">objetivos</h1>
-          <!--cartas flip ================================================================================================-->
-          <div class="main-objetivos">
-            <div class="card">
-              <div class="front">
-                <h2>objetivo general</h2>
-              </div>
-              <div class="back">
-                <p>Medir saberes a través del uso de herramientas tecnológicas e informáticas para fortalecer el
-                  aprendizaje
-                  en diferentes áreas del conocimiento mediante la exploración de contenidos interactivos y
-                  actividades
-                  prácticas en un recurso educativo digitales.
-                </p>
-              </div>
+      
+<main>
+  <div class="container">
+    <!-- ======================================================
+    ACTIVIDAD COMPLETAR PALABRAS
+    ====================================================== -->
 
-            </div>
+    <section class="fill-words">
 
-            <div class="card">
-              <div class="front">
-                <h2>objetivos Específicos de Aprendizaje</h2>
-              </div>
-              <div class="back">
-                <ul>
-                  <li>Reconocer la importancia de las herramientas tecnológicas en el proceso de aprendizaje.
-                  </li>
-                  <li>Identificar diferentes formas de aplicar herramientas tecnológicas en diversas áreas del
-                    conocimiento.</li>
-                  <li> Utilizar herramientas tecnológicas de manera responsable y eficiente para apoyar el aprendizaje.
-                  </li>
-                </ul>
+      <!-- Encabezado -->
+      <header class="fill-words__header">
 
-              </div>
-            </div>
+        <h2 class="fill-words__title">Completa las palabras</h2>
+
+        <p class="fill-words__description"> Arrastra cada palabra al espacio correcto.</p>
+
+      </header>
+
+      <!-- Contenido principal -->
+      <div class="fill-words__content">
+
+        <!-- Palabras -->
+        <aside class="fill-words__options">
+          <div class="fill-words__word" draggable="true" data-word="Reciclaje">
+            Reciclaje
           </div>
 
-        </div>
-
-
-
-        <div class="container">
-          <div class="main-contenidos">
-            <h1 class="prin"> Contenidos Tématicos</h1>
-            <div class="main-contenidos-detalles">
-
-              <details>
-                <summary>
-                  <h2>unidad 1: Contextualizacion</h2>
-                </summary>
-
-
-                <ul>
-                  <li>Herramientas tecnologicas y digitales en el contexto educativo</li>
-                  <ul>
-                    <li>relacion entre tecnologia y educación</li>
-                    <li>Importancia de la tecnologia en procesos de aprendizaje</li>
-                    <li>Transformación del aprendizaje con el uso de herramientas tecnológicas</li>
-                  </ul>
-                  <li>Características de las herramientas tecnológicas y digitales</li>
-                  <ul>
-                    <li>Qué son las herramientas tecnológicas.</li>
-                    <li>Qué son las herramientas digitales.</li>
-                    <li>Diferencias y relación entre ambas.</li>
-                  </ul>
-                  <li>
-                    Finalidad de las herramientas tecnológicas y digitales en el contexto educativo.
-                  </li>
-
-                  <ul>
-                    <li>Herramientas para investigar.</li>
-                    <li>Herramientas para organizar información.</li>
-                    <li>Herramientas para crear contenidos.</li>
-                    <li>Herramientas para comunicar y colaborar.</li>
-                  </ul>
-                </ul>
-                </ul>
-              </details>
-
-
-              <details>
-                <summary>
-                  <h2>Unidad 2- Clasificación de las herramientas </h2>
-                </summary>
-
-
-                <ul>
-                  <li>Búsqueda de herramientas tecnológicas y digitales
-                    <ul>
-                      <li>Estrategias para encontrar herramientas educativas.</li>
-                      <li>Criterios para seleccionar herramientas tecnológicas.</li>
-                      <li>Evaluación básica de herramientas digitales.</li>
-                    </ul>
-                  </li>
-                  <li>Clasificación y tipos de herramientas tecnológicas.</li>
-
-
-                  <ul>
-                    <li>Herramientas para la creación de contenido.</li>
-                    <li>Herramientas para la comunicación y colaboración</li>
-                  </ul>
-                  <li>Clasificación y tipos de herramientas digitales.</li>
-
-
-                  <ul>
-                    <li>Herramientas de edición de texto y documentos.</li>
-                    <li>Herramientas de presentación de información.</li>
-                    <li>Herramientas de hojas de cálculo y análisis de datos.</li>
-                  </ul>
-                  <li>Gestión de la información y el conocimiento mediante herramientas tecnológicas.
-                    <ul>
-                      <li>Búsqueda y selección de información confiable.</li>
-                      <li>Organización de información digital.</li>
-                      <li>Transformación de la información en conocimiento</li>
-                    </ul>
-                </ul>
-
-              </details>
-
-
-
-              <details>
-                <summary>
-                  <h2>Unidad 3 - Aplicación e integración de herramientas tecnológicas para el aprendizaje</h2>
-                </summary>
-
-                <p>
-                <ul>
-                  <li>Productividad (Gestión del tiempo) </li>
-                  <ul>
-                    <li>Organización del tiempo de estudio.</li>
-                    <li>Priorización de tareas académicas</li>
-                    <li>Uso de herramientas digitales para optimizar el trabajo académico.</li>
-                  </ul>
-
-                  <li>Gestión y planificación de tareas</li>
-
-                  <ul>
-
-                    <li>Organización de actividades académicas.</li>
-                    <li>Seguimiento de tareas y proyectos.</li>
-                    <li>Planificación del aprendizaje</li>
-                  </ul>
-
-                  <li>Recursos educativos digitales RED apoyo a mi proceso formativo.</li>
-
-                  <ul>
-
-                    <li>Qué son los Recursos Educativos Digitales (RED).</li>
-                    <li>Importancia de los RED en la educación.</li>
-                    <li>Uso de los RED como apoyo al proceso formativo.</li>
-
-
-                  </ul>
-                </ul>
-                </p>
-              </details>
-
-            </div>
-
+          <div class="fill-words__word" draggable="true" data-word="Tecnología">
+            Tecnología
           </div>
-        </div>
+
+          <div class="fill-words__word" draggable="true" data-word="Contaminación" >
+            Contaminación
+          </div>
+        </aside>
+
+        <!-- Frases -->
+
+        <section class="fill-words__sentences">
+
+          <p class="fill-words__sentence"> El <span class="fill-words__dropzone" data-answer="Reciclaje"></span>ayuda a disminuir residuos.</p>
+
+          <p class="fill-words__sentence"> La <span class="fill-words__dropzone" data-answer="Tecnología"></span> está presente en la vida diaria.</p>
+
+          <p class="fill-words__sentence"> La <span class="fill-words__dropzone" data-answer="Contaminación"
+            ></span>
+            afecta el medio ambiente.
+          </p>
+
+        </section>
+
+      </div>
+
+      <!-- Botones -->
+
+      <div class="fill-words__controls">
+        <button class="button button--primary" id="checkFillWords" type="button">Verificar</button>
+        <button class="button button--secondary" id="resetFillWords" type="button">Reiniciar</button>
+      </div>
+
+      <!-- Feedback -->
+
+      <div class="fill-words__feedback" id="fillWordsFeedback">
+
+      </div>
+
+    </section>
+
+
+  </div>
+</main>
+
+
 
 
       </div>
 
+    <script>
+      document.addEventListener('DOMContentLoaded',()=>{
+
+        const words=document.querySelectorAll('.fill-words__word');
+        const zones=document.querySelectorAll('.fill-words__dropzone');
+        const checkBtn=document.getElementById('checkFillWords');
+        const resetBtn=document.getElementById('resetFillWords');
+        const feedback=document.getElementById('fillWordsFeedback');
+
+        let currentWord=null;
 
 
- <DIV class="container" style="margin: 0 2';">
-            <H2>RUTA SUGERIDA   </H2>
-            <a class="uk-button uk-button-default" href="units/unidad1/index.html">unidad 1</a> 
-            <a class="uk-button uk-button-default" href="units/unidad2/index.html">unidad 2</a>
-            <a class="uk-button uk-button-default" href="units/unidad3/index.html">unidad 3</a>
-           
-    </div>
-  </div>
 
+        words.forEach((word)=>{
+          word.addEventListener('dragstart',()=>{
+            currentWord=word;
+          });
+
+        zones.forEach((zone)=>{
+          zone.addeventListener('dragover',(event)=>{
+            event.preventDefault();
+
+            zone.classList.add('over');
+          });
+
+          zone.addEventListener('dragleave',()=>{
+            zone.classList.remove('over');
+          });
+
+          zone.addEventListener('drop',()=>{
+            event.preventDefault();
+
+            zone.classList.remove('over');  
+
+            if(zone.children.length===0){
+              zone.appendChild(currentWord);
+            }
+            
+        })
+
+        checkBtn.addEventListener('click',()=>{
+          let correct=0;
+
+          zones.forEach((zone)=>{
+            const word=zone.queryselector('.fill-words__word');
+
+            if(!word)return;
+
+            if(word.dataset.word===zone.dataset.answer){
+              correct++;
+            }
+             
+        });
+
+          feedback.textContent=`Has acertado ${correct} de ${zones.length} palabras.`;
+        });
+
+        resetBtn.addEventListener('click',()=>{
+          location.reload();
+
+      });
+    });
+    </script>
 
   <br><br><br>
   <!--footer ====================================================================================================================================-->
