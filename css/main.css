@@ -367,6 +367,23 @@ ul ul ul {
 li {
     margin-bottom: 5px;
 }
+   .actividades-evaluativas a{
+            color: white;
+        }
+     .actividades-evaluativas   a:active,.actividades-evaluativas a:visited , .actividades-evaluativasa:focus, .actividades-evaluativas a:hover{
+            color: white;
+        }
+
+
+
+
+div.actividades-evaluativas{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 /*estilos para la etiquera details==========================================================*/
 

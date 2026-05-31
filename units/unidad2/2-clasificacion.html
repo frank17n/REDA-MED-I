@@ -8,8 +8,13 @@
     <title>unidad 1</title>
     <meta name="description" content="la pagina lleva un taller" />
     <meta name="keywords" content="material-educativo" />
-    <link rel="stylesheet" href="unidad1.css">
+
+
+    <link rel="stylesheet" href="../../css/unidad.css">
     <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="/css/uikit.min.css">
+
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!--icono a defnir-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
@@ -31,10 +36,11 @@
                     </li>
                     <!-- UNIDAD 1====================================================================================================== -->
                     <li class="inicio dropdown">
-                        <a href="index.html" >Unidad 1</a>
+                        <a href="index.html">Unidad 1</a>
                         <ul class="submenu">
                             <li class="dropdown2">
-                                <a href="../unidad1/1-herramientas_tecnologicas.html">Herramientas tecnológicas y digitales</a>
+                                <a href="../unidad1/1-herramientas_tecnologicas.html">Herramientas tecnológicas y
+                                    digitales</a>
                                 <ul class="submenu2">
                                     <li><a href="#">Relación tecnología-educación</a></li>
                                     <li><a href="#">Importancia en el aprendizaje</a></li>
@@ -51,15 +57,7 @@
                                 </ul>
                             </li>
 
-                            <li class="dropdown2">
-                                <a href="../unidad1/3-finalidad.html">Finalidad</a>
-                                <ul class="submenu2">
-                                    <li><a href="#">Investigar</a></li>
-                                    <li><a href="#">Organizar información</a></li>
-                                    <li><a href="#">Crear contenidos</a></li>
-                                    <li><a href="#">Comunicar y colaborar</a></li>
-                                </ul>
-                            </li>
+
 
                             <li class="dropdown2">
                                 <a href="../unidad1/4-uso responsable.html responsable.html">Uso responsable</a>
@@ -137,11 +135,6 @@
 
                             <li class="dropdown2">
                                 <a href="../unidad3/3-RED.html">Recursos RED</a>
-                                <ul class="submenu2">
-                                    <li><a href="#">Qué son los RED</a></li>
-                                    <li><a href="#">Importancia</a></li>
-                                    <li><a href="#">Uso en el aprendizaje</a></li>
-                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -157,7 +150,8 @@
                     </li>
 
                     <li class="dropdown help">
-                       <a href="../../ayuda.html">ayuda<img src="../../assets/images/ayuda.png" alt="imagen de ayuda" />
+                        <a href="../../ayuda.html">ayuda<img src="../../assets/images/ayuda.png"
+                                alt="imagen de ayuda" />
                         </a>
                     </li>
                 </ul>
@@ -165,9 +159,98 @@
         </nav>
     </header>
 
+    <div class="container">
+        <main class="bienvenida">
+            <div class="mensaje">
+                <img src="../../assets/images/2 herramientas tecnologicas.png" alt="">
+            </div>
+            <div class="mensaje">
+                <h1 class="prin">Herramientas tecnológicas </h1>
+                <p>
+                    En esta sección se presentarán diversas herramientas tecnológicas que pueden ser utilizadas en el
+                    ámbito educativo para mejorar el proceso de enseñanza-aprendizaje. Estas herramientas incluyen
+                    plataformas de gestión del aprendizaje, aplicaciones de colaboración, recursos multimedia y software
+                    educativo, entre otros. Se explorarán sus características, funcionalidades y beneficios para
+                    facilitar la integración efectiva de la tecnología en el entorno educativo.
+                </p>
+            </div>
+        </main>
+    </div>
+    <div class="particion"></div>
+    <div class="container">
+        <div class="info" id="importancia">
+            <audio src="../../assets/audio/importania .mp3" controls></audio>
+        </div>
+        <div class="info" id="creacion-contenido">
 
-   
+            <embed src="../../assets/Herramientas Digitales para Crear, Comunicar y Colaborar.pdf" type=""
+                style="width:100%; height:800px;" />
 
+
+        </div>
+
+        <div class="container" id="u2act2">
+
+            <details>
+                <summary>Actividad de refuerzo</summary>
+                <div class="actividad-container">
+                    <h2>Actividad: Clasificación de Herramientas Tecnológicas</h2>
+                    <p class="instrucciones">Arrastra cada bloque de herramienta hacia la caja que le corresponda según
+                        su función principal.</p>
+
+                    <div class="bloque-opciones" id="banco-herramientas">
+                        <div class="tarjeta-herramienta" draggable="true" id="h1" data-type="creacion">Word / Google
+                            Docs</div>
+                        <div class="tarjeta-herramienta" draggable="true" id="h2" data-type="colaboracion">WhatsApp /
+                            Slack</div>
+                        <div class="tarjeta-herramienta" draggable="true" id="h3" data-type="creacion">Photoshop / Canva
+                        </div>
+                        <div class="tarjeta-herramienta" draggable="true" id="h4" data-type="colaboracion">Trello /
+                            Asana</div>
+                        <div class="tarjeta-herramienta" draggable="true" id="h5" data-type="creacion">Premiere / iMovie
+                        </div>
+                        <div class="tarjeta-herramienta" draggable="true" id="h6" data-type="colaboracion">Zoom / Teams
+                        </div>
+                        <div class="tarjeta-herramienta" draggable="true" id="h7" data-type="creacion">PowerPoint /
+                            Prezi</div>
+                    </div>
+
+                    <div class="zonas-deposito">
+                        <div class="columna columna-creacion" data-category="creacion">
+                            <h3>Generación y Creación de Contenido</h3>
+                            <div class="lista-soltar" id="zona-creacion"></div>
+                        </div>
+
+                        <div class="columna columna-colaboracion" data-category="colaboracion">
+                            <h3>Comunicación y Colaboración</h3>
+                            <div class="lista-soltar" id="zona-colaboracion"></div>
+                        </div>
+                    </div>
+
+                    <button class="boton-verificar" onclick="verificarRespuestas()">Verificar Respuestas</button>
+                    <div id="resultado"></div>
+                </div>
+            </details>
+
+        </div>
+
+        <div class="uk-margin" style="display: flex;">
+            <a href="1-busqueda.html" style="display:flex; float: left;">
+                <button style="background-color: black; ;"
+                    class="uk-button uk-button-secondary uk-button-large">REGRESAR
+                    A BÚSQUEDA</button></a>
+            <a href="3-tipos.html"><button class="uk-button uk-button-primary uk-button-large">CONTINUAR CON
+                    TIPOS</button></a>
+
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script src="../../js/u2ac2.js"></script>
     <!--footer ====================================================================================================-->
     <footer class=" site-footer">
         <div class="container">
