@@ -9,7 +9,9 @@
     margin: 0 auto;
 }
 
-
+button.uk-button{
+    margin: 0 0 50px;
+}
 /*estilos */
 * h1{
     font-size: var(--fuente-h1-size);
